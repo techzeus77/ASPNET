@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Testing.Models;
+using Testing.Models;
+using Dapper;
 
 namespace Testing
 {
      public interface IProductRepository
     {
-        public IEnumerable<Product> GetAllProducts()
-        {
-            return _Conn.Query<product>("SELECT * FROM PRODUCTS;");
-        }
+        public IEnumerable<product> GetAllProducts();
     }
 }

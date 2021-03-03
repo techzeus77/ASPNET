@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Product>
+﻿@model IEnumerable<product>
 
 <h2>Products</h2>
 <table class="table">
@@ -16,12 +16,12 @@
     {
         <tr>
 
-            <td>product.ProductID</td>
-            <td>product.Name</td>
-            <td>product.Price</td>
-            <td>product.CategoryID</td>
-            <td>product.OnSale</td>
-            <td>product.StokLevel</td>
+            <td>@product.ProductID</td>
+            <td>@product.Name</td>
+            <td>@product.Price</td>
+            <td>@product.CategoryID</td>
+            <td>@product.OnSale</td>
+            <td>@product.StockLevel</td>
 
         </tr>
     } 

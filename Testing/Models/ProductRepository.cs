@@ -1,4 +1,5 @@
 ﻿
+using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -7,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace Testing.Models
 {
-    public class ProductRepository: IProductRepository
+    public class ProductRepository : IProductRepository
     {
-        private readonly IDbConnection _Conn;
+        private readonly IDbConnection _conn;
 
-        public ProductRepository(IDbConnection Conn)
+        public ProductRepository(IDbConnection conn)
         {
-            _Conn = Conn;
+            _conn = conn;
         }
 
-        public IEnumerable<Product> GetAllProduts()
+        public IEnumerable<product> GetAllProducts()
         {
-            return _Conn.Query<product>("SELECT * FROM PRODUCTS;");
+            return _conn.Query<product>("SELECT * FROM PRODUCTS;");
         }
 
 
