@@ -10,5 +10,17 @@ namespace Testing
      public interface IProductRepository
     {
         public IEnumerable<product> GetAllProducts();
+
+        public product GetProduct(int id);
+
+        public void UpdateProduct(product product);
+
+
+
+
     }
+
+
+
+
 }
