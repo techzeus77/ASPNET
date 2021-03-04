@@ -15,7 +15,11 @@ namespace Testing
 
         public void UpdateProduct(product product);
 
+        public void InsertProduct(product productToInsert);
+        public IEnumerable<Category> GetCategories();
+        public product AssignCategory();
 
+        public void DeleteProduct(product product);
 
 
     }
